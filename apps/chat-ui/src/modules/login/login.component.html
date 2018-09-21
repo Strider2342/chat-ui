@@ -1,0 +1,44 @@
+<div #loginDiv id="loginDiv" class="loginBox" *ngIf="!registerMode">
+  <div id="loginEmailDiv" class="inputDiv">
+    <h5>E-mail:</h5>
+    <input #loginUsername type="text" id="loginMail" class="loginInput" />
+  </div>
+
+  <div id="loginPasswordDiv" class="inputDiv">
+    <h5>Password:</h5>
+    <input #loginPassword type="password" id="loginPassword" class="loginInput" />
+  </div>
+
+  <a class="link defaultGreen">Forgot your password?</a>
+
+  <a class="button defaultGreen"
+     (click)="login(loginUsername.value, loginPassword.value)">
+    Login
+  </a>
+
+  <a class="link defaultGreen" (click)="changeToRegister(true)">or Sign Up</a>
+</div>
+
+<div #registerDiv id="registerDiv" class="loginBox" *ngIf="registerMode">
+  <div id="registerEmailDiv" class="inputDiv">
+    <h5>E-mail:</h5>
+    <input #registerUsername type="text" id="registerMail" class="loginInput" />
+  </div>
+
+  <div id="registerPasswordDiv" class="inputDiv">
+    <h5>Password:</h5>
+    <input #registerPassword type="password" id="registerPassword" class="loginInput" />
+  </div>
+
+  <div id="registerPasswordDiv" class="inputDiv">
+    <h5>Password:</h5>
+    <input #registerPasswordConfirm type="password" id="registerPassword" class="loginInput" />
+  </div>
+
+  <a class="button defaultGreen"
+     (click)="register(registerUsername.value, registerPassword.value, registerPasswordConfirm.value)">
+    Register
+  </a>
+
+  <a class="link defaultGreen" (click)="changeToRegister(false)">or Sign In</a>
+</div>
