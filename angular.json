@@ -1,11 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "",
   "projects": {
     "chat-ui": {
-      "root": "",
-      "sourceRoot": "src",
+      "root": "apps\\chat-ui",
+      "sourceRoot": "apps/chat-ui/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {},
@@ -13,17 +13,17 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/chat-ui",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.app.json",
+            "outputPath": "dist\\apps\\chat-ui",
+            "index": "apps/chat-ui/src/index.html",
+            "main": "apps/chat-ui/src/main.ts",
+            "polyfills": "apps/chat-ui/src/polyfills.ts",
+            "tsConfig": "apps\\chat-ui\\tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "apps/chat-ui/src/favicon.ico",
+              "apps/chat-ui/src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "apps/chat-ui/src/styles.css"
             ],
             "scripts": []
           },
@@ -31,8 +31,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "apps/chat-ui/src/environments/environment.ts",
+                  "with": "apps/chat-ui/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -67,17 +67,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "karmaConfig": "src/karma.conf.js",
+            "main": "apps/chat-ui/src/test.ts",
+            "polyfills": "apps/chat-ui/src/polyfills.ts",
+            "tsConfig": "apps\\chat-ui\\tsconfig.spec.json",
+            "karmaConfig": "apps\\chat-ui\\karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "apps/chat-ui/src/styles.css"
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "apps/chat-ui/src/favicon.ico",
+              "apps/chat-ui/src/assets"
             ]
           }
         },
@@ -85,8 +85,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
+              "apps\\chat-ui\\tsconfig.app.json",
+              "apps\\chat-ui\\tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -96,13 +96,13 @@
       }
     },
     "chat-ui-e2e": {
-      "root": "e2e/",
+      "root": "apps\\chat-ui-e2e",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
+            "protractorConfig": "apps\\chat-ui-e2e\\protractor.conf.js",
             "devServerTarget": "chat-ui:serve"
           },
           "configurations": {
@@ -114,7 +114,7 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "e2e/tsconfig.e2e.json",
+            "tsConfig": "apps\\chat-ui-e2e\\tsconfig.e2e.json",
             "exclude": [
               "**/node_modules/**"
             ]
@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "chat-ui"
+  "defaultProject": "chat-ui",
+  "cli": {
+    "defaultCollection": "@nrwl/schematics"
+  }
 }
