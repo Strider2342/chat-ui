@@ -5,7 +5,7 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   height: 100%;
-  background-color: #444444;
+  background-color: $light_gray_background_color;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@ body {
 .inputDiv {
   h5 {
     margin: 2px;
-    color: #cccccc;
+    color: $light-green-font-color;
     font-size: 12px;
     text-transform: uppercase;
   }

@@ -1,8 +1,16 @@
+app-login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .loginLogoCont {
   h1 {
     margin: 10px 0;
     font-size: 60px;
-    color: #cccccc;
+    color: $light_green_font_color;
     font-variant: small-caps;
     letter-spacing: -8px;
   }
@@ -12,7 +20,7 @@
   width: 380px;
   max-height: 400px;
   height: 400px;
-  background-color: #383838;
+  background-color: $dark_gray_background_color;
   border: 1px solid #333333;
   border-radius: 5px;
   display: flex;
