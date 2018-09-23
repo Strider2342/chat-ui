@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-import { LoginComponent } from '../modules/login/login.component';
+import { LoginModule } from '../modules/login/login.module';
+import { LoginComponent } from '../modules/login/components/login.component';
 import { DashboardModule } from '../modules/dashboard/dashboard.module';
 import { DashboardComponent } from '../modules/dashboard/components/dashboard.component';
 
@@ -16,6 +17,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     CommonModule,
+    LoginModule,
     DashboardModule
   ],
   declarations: [],
