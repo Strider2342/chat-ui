@@ -45,6 +45,13 @@ body {
 .link.defaultGreen {
   color: #1c924a; }
 
+.loginLogoCont h1 {
+  margin: 10px 0;
+  font-size: 60px;
+  color: #cccccc;
+  font-variant: small-caps;
+  letter-spacing: -8px; }
+
 .loginBox {
   width: 380px;
   max-height: 400px;
